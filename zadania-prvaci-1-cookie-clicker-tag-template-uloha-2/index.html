@@ -1,0 +1,51 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cookie Clicker</title>
+
+  <link rel="stylesheet" href="https://matcha.mizu.sh/matcha.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <h1> Cookie Clicker </h1>
+  <h2>
+    You have <span id="cookie-count">0</span> cookies !
+  </h2>
+  <section>
+    <p>Cookies per click: <span id="cookies-per-click">1</span></p>
+    <p>Miners: <span id="miners-count">0</span></p>
+    <p>Mining speed: <span id="mining-speed">1</span> (max: 100)</p>
+    <progress id="mining-progress-bar" max="100" value="0"></progress>
+    
+    <hr>
+    
+    <p>Total cookies mined: <span id="total-cookies-mined">0</span></p>
+    <p>Total cookies spent: <span id="total-cookies-spent">0</span></p>
+    
+    <hr>
+  </section>
+  <section>
+    <button id="get-cookie-button" onclick="getCookie()">
+      Get cookie !
+    </button>
+    <button id="upgrade-button" onclick="upgrade()">
+      Upgrade (Cost: <span id="upgrade-cost">10</span> cookies) !
+    </button>
+    <button id="buy-miner-button" onclick="buyMiner()">
+      Buy Miner (Cost: <span id="miner-cost">100</span> cookies) !
+    </button>
+    <button id="miner-speed-upgrade" onclick="minerSpeedUpgrade()">
+      Upgrade Miner Speed (cost: <span id="speed-cost">10000</span> cookies) !
+    </button>
+    <button id="reset-game-button" class="danger" onclick="resetGame()">
+      Reset Game !
+    </button>
+  </section>
+
+</body>
+</html>
